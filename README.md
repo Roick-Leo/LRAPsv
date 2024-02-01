@@ -9,9 +9,11 @@ conda install bcftools
 ```
 
 # Usage
-python LRAPsv.py \
+```
+./LRAPsv.bin \
 -r ${REFERENCE} \
 -i ${INPUT_BAM} \
 -t ${THREADS} \
 -mq ${MAP QUANLITY} \
 -v ${OUTPUT}
+```
