@@ -21,3 +21,8 @@ chmod a+x LRAPsv.bin
 -mq ${MAP QUANLITY} \
 -v ${OUTPUT}
 ```
+
+# Contact
+
+- He Lei
+  - Email: helei1@genomics.cn
