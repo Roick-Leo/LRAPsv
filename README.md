@@ -29,6 +29,13 @@ conda activate LRAPsv
 /path/to/LRAPsv.bin -r /path/to/reference.fa -i /path/to/Sample_sorted.bam -v /path/to/output.vcf -t 15
 ```
 
+# Final comparison
+```
+truvari -f ref/human_hs37d5.fasta -b giab/HG002_SVs_Tier1_v0.6.vcf.gz\
+        --includebed giab/HG002_SVs_Tier1_v0.6.bed -o bench-pbsv --passonly\
+        --giabreport -r 1000 -p 0.00 -c /path/to/hg2.vcf.gz
+```
+
 # Contact
 - He Lei
   - Email: helei1@genomics.cn
