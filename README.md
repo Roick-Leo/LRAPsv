@@ -8,8 +8,7 @@ conda install sniffles=2.0.7
 conda install bcftools
 conda install tabix
 git clone https://github.com/Roick-Leo/LRAPsv.git
-cd LRAPsv
-chmod a+x LRAPsv.bin
+chmod -R a+x ./LRAPsv
 ```
 
 # Usage
