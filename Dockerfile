@@ -19,13 +19,13 @@ RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 RUN conda create -n LRAPsv python=3.9.5 -y
 
 # 指定使用该环境
-RUN /bin/bash -c "source activate LRAPsv"
-RUN pip install sniffles==2.0.7
-RUN conda install -c bioconda -y bcftools 
-RUN conda install -c bioconda -y tabix 
-# RUN conda install -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main -y git
-RUN git clone https://github.com/Roick-Leo/LRAPsv.git /tools
+SHELL ["conda", "run", "-n", "LRAPsv", "/bin/bash", "-c"]
+RUN pip install sniffles==2.0.7 -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN conda install -c bioconda -y bcftools
+RUN conda install -c bioconda -y tabix
+RUN /bin/bash -c "git clone https://github.com/Roick-Leo/LRAPsv.git /tools"
 ENV PATH="/tools/LRAPsv:$PATH"
-
+RUN echo "source activate LRAPsv" > ~/.bashrc
+ENV PATH="/opt/conda/envs/LRAPsv/bin:$PATH"
 # 指定容器启动时默认使用的命令
-CMD ["conda activate LRAPsv"]
+CMD ["bash"]
