@@ -21,7 +21,7 @@ RUN conda create -n LRAPsv python=3.9.5 -y
 # 指定使用该环境
 SHELL ["conda", "run", "-n", "LRAPsv", "/bin/bash", "-c"]
 RUN pip install sniffles==2.0.7 -i https://pypi.tuna.tsinghua.edu.cn/simple
-RUN conda install -c bioconda -y bcftools
+RUN apt-get install bcftools
 RUN conda install -c bioconda -y tabix
 RUN /bin/bash -c "git clone https://github.com/Roick-Leo/LRAPsv.git /tools"
 ENV PATH="/tools/LRAPsv:$PATH"
