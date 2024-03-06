@@ -3,10 +3,11 @@ LRAPsv is a germline structural variant caller for long-reads.
 
 # Installation
 ```
-conda create -n LRAPsv python=3.9.5
-conda install sniffles=2.0.7
-conda install bcftools
-conda install tabix
+conda create -n LRAPsv python=3.9.5 -y
+conda activate LRAPsv
+pip install sniffles=2.0.7
+conda install bcftools -y
+conda install tabix -y
 git clone https://github.com/Roick-Leo/LRAPsv.git
 chmod -R a+x ./LRAPsv
 ```
