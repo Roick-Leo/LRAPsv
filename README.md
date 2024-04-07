@@ -2,6 +2,15 @@
 LRAPsv is a germline structural variant caller for long-reads. 
 
 # Installation
+## Step1 configure the conda source
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --set show_channel_urls yes
+```
+## Step2 install LRAPsv
 ```
 conda create -n LRAPsv python=3.9.5 -y
 conda activate LRAPsv
